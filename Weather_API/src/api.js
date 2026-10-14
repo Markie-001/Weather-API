@@ -25,11 +25,11 @@ async function loadWeather() {
         console.log(weatherInfo)
 
         city.innerHTML = `${weatherInfo.name}`;
-        temp.innerHTML = `${weatherInfo.main.temp}°C`;
+        temp.innerHTML = `${Math.round(weatherInfo.main.temp)}°C`;
         iconTemp.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png" />`;
         main.innerHTML = `${weatherInfo.weather[0].main}`;
         deg.innerHTML = `${weatherInfo.wind.deg}°`;
         speed.innerHTML = `${weatherInfo.wind.speed} m/s`;
-        tempMin.innerHTML = `${weatherInfo.main.temp_min}°C`;
-        tempMax.innerHTML = `${weatherInfo.main.temp_max}°C`;
+        tempMin.innerHTML = `${Math.round(weatherInfo.main.temp_min)}°C`;
+        tempMax.innerHTML = `${Math.round(weatherInfo.main.temp_max)}°C`;
 }
