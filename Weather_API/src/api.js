@@ -8,7 +8,7 @@ const speed = document.getElementById('speed');
 const tempMin = document.getElementById('tempMin');
 const tempMax = document.getElementById('tempMax');
 
-const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let dateNow = new Date();
 let month = months[dateNow.getUTCMonth()];
 let day = dateNow.getUTCDate();
@@ -52,7 +52,6 @@ async function loadWeather() {
                 tempMax.innerHTML = `${Math.round(weatherInfo.main.temp_max)}°C`;
 
         } catch(error) {
-                
                 document.getElementById('city').textContent = 'City not found'
                 document.getElementById('temp').textContent = '...'
                 document.getElementById('main').textContent = '...'
